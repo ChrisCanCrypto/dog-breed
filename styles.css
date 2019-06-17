@@ -26,5 +26,19 @@ fieldset{
 }
 
 main{
+    display: flex;
+    flex-direction: column;
     background-image: linear-gradient(to bottom, #ecfdff, #e1f2f4, #d5e7e9, #cadcde, #bfd1d3);
+    height: 50vh;
+    text-align: center;
+    align-items: center;
+}
+
+main img{
+    max-width: 500px;
+    max-height: 500px;
+}
+
+main h1{
+    text-transform: uppercase;
 }

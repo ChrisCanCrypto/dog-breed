@@ -7,9 +7,18 @@ function getDogImg(breed){
             return response.json()
         })
         .then(responseJson => {
-            console.log(responseJson)
+            
+            displayImg(responseJson, breed);
         })
         .catch( err => alert('Sorry, that breed is not in the database. Try another one!'));
+}
+
+function displayImg(imgJson, breed){
+    console.log(imgJson);
+    $('.dog-img').attr('src', imgJson.message);  
+    $('.dog-img').attr('alt', breed);  
+    $('.breed-name').text(breed);
+    
 }
 
 function watchForm(){
